@@ -11,7 +11,7 @@ function StepOne({
   step,
 }) {
   return (
-    <div className="ml-[90px] items-center justify-center">
+    <div className="lg:ml-[90px]  items-center justify-center">
       <Header
         title={"Personal info"}
         text={"Please provide your name, email address, and phone number."}

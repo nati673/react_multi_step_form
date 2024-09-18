@@ -73,7 +73,7 @@ function StepThree({
   ];
   // formData.add_ons = ["Online Service", "Larger storage"];
   return (
-    <div className="ml-[90px] items-center ">
+    <div className="lg:ml-[90px]  items-center ">
       <Header
         title={"Pick add-ons"}
         text={"Add-ons help enhance your gaming experience."}
@@ -112,7 +112,7 @@ function StepThree({
                       <h3 className="text-[16px] font-semibold text-blue-900 font-ub">
                         {data.name}
                       </h3>
-                      <p className="text-gray-400 text-[15px] font-reg">
+                      <p className="text-gray-400 text-[12px] lg:text-[14px] font-reg">
                         {data.description}
                       </p>
                     </div>

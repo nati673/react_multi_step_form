@@ -25,7 +25,7 @@ function StepFour({
   };
 
   return (
-    <div className="ml-[90px] items-center ">
+    <div className="lg:ml-[90px] items-center ">
       <Header
         title={"Finishing up"}
         text={"Double-check everything looks OK before confirming."}
@@ -34,10 +34,10 @@ function StepFour({
       <div className="flex flex-col ">
         <div className="flex items-center mt-4">
           <div
-            className={`cursor-pointer bg-[#ffffff] min-w-full  rounded-lg hover:border-blue-500`}
+            className={` bg-[#ffffff] min-w-full  rounded-lg hover:border-blue-500`}
           >
             <div
-              className={`cursor-pointer bg-[#F8F9FE] justify-between rounded-lg hover:border-blue-500`}
+              className={` bg-[#F8F9FE] justify-between rounded-lg hover:border-blue-500`}
             >
               <div className="flex items-center p-4">
                 <div className="flex items-center mr-[170px]">
@@ -49,7 +49,8 @@ function StepFour({
                       })`}
                     </h3>
                     <a
-                      className="text-gray-600 text-[15px] underline font-reg"
+                      href="#"
+                      className="text-gray-600 text-[15px] underline hover:text-blue-500 font-reg"
                       onClick={() => prevStep(true)}
                     >
                       Change
@@ -63,7 +64,7 @@ function StepFour({
                 </div>
               </div>
 
-              <hr className="m-4 " />
+              <hr className="m-4" />
               <div className="flex flex-col items-center mt-4 p-4 ">
                 {formData.add_ons.map((addOns, index) => (
                   <div className="flex flex-row items-center justify-between w-full mb-2">

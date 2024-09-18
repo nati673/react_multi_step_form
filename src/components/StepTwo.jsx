@@ -68,14 +68,14 @@ function StepTwo({
     },
   ];
   return (
-    <div className="ml-[90px] items-center justify-center">
+    <div className="lg:ml-[90px]  items-center justify-center">
       <Header
         title={"Select your plan"}
         text={"You have the option of monthly or yearly billing."}
       />
 
       <div className="flex flex-col">
-        <div className="mt-8 flex flex-row ">
+        <div className="mt-8 flex flex-col lg:flex-row ">
           {plans
             .filter((plan) =>
               formData.plan_type === "monthly"
@@ -100,9 +100,9 @@ function StepTwo({
                     value={formData.plan.name}
                   />
 
-                  <div className="bg-white w-[130px] p-3 rounded-lg border  hover:border-blue-500 border-gray-200  hover:peer-checked:ring-blue-500 peer-checked:bg-[#F8F9FE]  peer-checked:ring-[0.7px] peer-checked:ring-blue-500">
-                    <div class="flex flex-col items-start text-left ">
-                      <div class=" text-white p-2 mb-8 rounded-full">
+                  <div className="bg-white w-[100%] lg:w-[130px] p-3 lg:mb-0 mb-4 rounded-lg border  hover:border-blue-500 border-gray-200  hover:peer-checked:ring-blue-500 peer-checked:bg-[#F8F9FE]  peer-checked:ring-[0.7px] peer-checked:ring-blue-500">
+                    <div class="flex flex-row lg:flex-col  items-start text-left ">
+                      <div class=" text-white p-2 lg:mb-8  rounded-full">
                         <img src={plan.icon} alt="advanced icon" />
                       </div>
                       <div className="">
@@ -121,7 +121,7 @@ function StepTwo({
               </div>
             ))}
         </div>
-        <div className="bg-[#F8F9FE] rounded-lg h-[30px] mt-7 flex flex-row items-center justify-around p-5 pl-[90px] pr-[90px]">
+        <div className="bg-[#F8F9FE] rounded-lg h-[30px] mt-7 flex flex-row items-center justify-around p-5 sm:pl-[10px] sm:pr-[10px] w-full lg:pl-[90px] lg:pr-[90px]">
           <h2
             className={`font-ub text-[14px] ${
               formData.plan_type === "monthly"

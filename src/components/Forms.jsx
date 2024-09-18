@@ -32,6 +32,7 @@ function Forms({ step, handleChange,formData, formErrors, setFormData, prevStep,
       );
     case 3:
       return (
+        
         <StepThree
           handleChange={handleChange}
           formData={formData}

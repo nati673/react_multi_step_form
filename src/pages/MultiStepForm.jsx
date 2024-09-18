@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import StepCard from "../components/StepCard";
 import Forms from "../components/Forms";
+import MobileStepCard from "../components/MobileStepCard";
+import MobileButtons from "../components/MobileButtons";
 
 function MultiStepForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone_number: "",
+    name: "u",
+    email: "u@u.u",
+    phone_number: "56",
     plan: { name: "Arcade", price: "$9/mo" },
 
     add_ons: [
@@ -49,22 +51,32 @@ function MultiStepForm() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-6 shadow-md w-3/5 h-fit flex items-center rounded-2xl">
-        <div className="flex flex-row  w-full items-center">
-          <StepCard step={step} />
-          <Forms
-            step={step}
-            handleChange={handleChange}
-            formData={formData}
-            formErrors={errors}
-            setFormData={setFormData}
-            prevStep={prevStep}
-            nextStep={nextStep}
-          />
+    <>
+      <MobileStepCard step={step} />
+      <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="bg-white p-6 shadow-md lg:mt-0 mt-[-70vh] lg:w-3/5 w-[90%] h-fit flex items-center rounded-2xl">
+          <div className="flex flex-col lg:flex-row w-full  items-center">
+            <StepCard step={step} />
+
+            <Forms
+              step={step}
+              handleChange={handleChange}
+              formData={formData}
+              formErrors={errors}
+              setFormData={setFormData}
+              prevStep={prevStep}
+              nextStep={nextStep}
+            />
+          </div>
         </div>
       </div>
-    </div>
+      <MobileButtons
+        step={step}
+        prevStep={prevStep}
+        nextStep={nextStep}
+        confirm={step === "5" ? "true" : "false"}
+      />
+    </>
   );
 }
 
