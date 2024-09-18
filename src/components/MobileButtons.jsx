@@ -18,7 +18,7 @@ function MobileButtons({ step, prevStep, nextStep, confirm }) {
           className="bg-[#483EFF] text-[#ffffff] font-medium py-2 px-4 rounded-md h-[44px] hover:bg-[#938CFE] transition duration-300 ease-in-out"
           onClick={nextStep}
         >
-          Confirm
+          Confirmm
         </button>
       ) : (
         <button
