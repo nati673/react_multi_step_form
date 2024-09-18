@@ -3,7 +3,7 @@ import React from "react";
 function Buttons({ step, prevStep, nextStep, confirm }) {
   return (
     <div className="lg:block hidden">
-      <div className="flex  flex-row items-center justify-between mt-[30px] ">
+      <div className="flex  flex-row items-center justify-between mt-[130px] ">
         {step !== 1 ? (
           <button
             className=" text-[#9e9ea8] font-medium hover:text-[#03295A] py-2 px-4 rounded-md"

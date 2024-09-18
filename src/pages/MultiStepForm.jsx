@@ -7,9 +7,9 @@ import MobileButtons from "../components/MobileButtons";
 function MultiStepForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    name: "u",
-    email: "u@u.u",
-    phone_number: "56",
+    name: "",
+    email: "",
+    phone_number: "",
     plan: { name: "Arcade", price: "$9/mo" },
 
     add_ons: [
@@ -54,7 +54,7 @@ function MultiStepForm() {
     <>
       <MobileStepCard step={step} />
       <div className="flex items-center justify-center h-screen bg-gray-100">
-        <div className="bg-white p-6 shadow-md lg:mt-0 mt-[-70vh] lg:w-3/5 w-[90%] h-fit flex items-center rounded-2xl">
+        <div className="bg-white p-4 shadow-md lg:mt-0 mt-[-70vh] lg:w-3/5 w-[90%] h-fit flex items-center rounded-2xl">
           <div className="flex flex-col lg:flex-row w-full  items-center">
             <StepCard step={step} />
 

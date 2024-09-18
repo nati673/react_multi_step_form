@@ -21,7 +21,7 @@ function StepCard({ step }) {
   ];
   return (
     <div
-      className="hidden lg:block h-[560px] bg-cover bg-center  w-[280px] p-9 rounded-xl"
+      className="hidden lg:block h-[560px] bg-cover bg-center  w-[280px] p-9 pt-3 rounded-xl"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="flex flex-col">
