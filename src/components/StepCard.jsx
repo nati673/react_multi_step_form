@@ -37,7 +37,7 @@ function StepCard({ step }) {
                   : "border-neutral-50 border text-white"
               } w-8 h-8 text-center`}
             >
-              <p className="p-[6.9px] font-ub text-[14px] ">{stepItem.step_number}</p>
+              <p className="p-[6.9px] font-ub text-[14px]">{stepItem.step_number}</p>
             </div>
 
             <div className="text-left ml-3">

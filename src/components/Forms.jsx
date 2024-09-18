@@ -5,13 +5,14 @@ import StepThree from "./StepThree";
 import StepFour from "./StepFour";
 import Thank from "./Thank";
 
-function Forms({ step, handleChange,formData,setFormData, prevStep, nextStep }) {
+function Forms({ step, handleChange,formData, formErrors, setFormData, prevStep, nextStep }) {
   switch (step) {
     case 1:
       return (
         <StepOne
           handleChange={handleChange}
           formData={formData}
+          formErrors={formErrors}
           prevStep={prevStep}
           nextStep={nextStep}
           step={step}
@@ -22,6 +23,7 @@ function Forms({ step, handleChange,formData,setFormData, prevStep, nextStep }) 
         <StepTwo
           handleChange={handleChange}
           formData={formData}
+          formErrors={formErrors}
           setFormData={setFormData}
           prevStep={prevStep}
           nextStep={nextStep}
@@ -33,6 +35,7 @@ function Forms({ step, handleChange,formData,setFormData, prevStep, nextStep }) 
         <StepThree
           handleChange={handleChange}
           formData={formData}
+          formErrors={formErrors}
           setFormData={setFormData}
           prevStep={prevStep}
           nextStep={nextStep}

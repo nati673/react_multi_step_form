@@ -12,12 +12,10 @@ function StepTwo({
   nextStep,
   step,
 }) {
-  // Function to toggle the plan type
   const handleToggle = () => {
     const newPlanType = formData.plan_type === "monthly" ? "yearly" : "monthly";
     handleChange("plan_type")({ target: { value: newPlanType } });
   };
-
   const plans = [
     {
       id: 1,
@@ -38,7 +36,7 @@ function StepTwo({
     {
       id: 3,
       name: "Pro",
-      icon: ArcadeIcon,
+      icon: ProIcon,
       price: "$15/mo",
       discount: "",
       type: "monthly",
@@ -63,7 +61,7 @@ function StepTwo({
     {
       id: 6,
       name: "Pro",
-      icon: ArcadeIcon,
+      icon: ProIcon,
       price: "$150/yr",
       discount: "2 months free",
       type: "yearly",
@@ -90,6 +88,7 @@ function StepTwo({
                   <input
                     type="radio"
                     name={plan.name}
+                    required
                     class="hidden peer"
                     checked={formData.plan.name === plan.name}
                     onChange={() =>
